@@ -110,6 +110,10 @@
 }
 
 - (void)redraw {
+    // TODO remove this when the "judder" problem has been resolved
+    // See this ticket: https://github.com/mrackwitz/MRProgress/issues/46
+    return;
+
     #if DEBUG
         if (!NSThread.isMainThread) {
             NSLog(@"** WARNING - %@ -%@ should be always called on the main thread!",
